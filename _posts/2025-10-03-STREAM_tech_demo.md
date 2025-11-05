@@ -54,6 +54,7 @@ STREAM은 멀티미디어가 핵심적인 기술 기능이라 더 그렇기도 �
 - 결과는 매우 성공적이었고, UX나 기능적인 측면에서 유니티가 부족한 경우가 생기면 웹뷰 임베딩으로 부분적으로 선회하는 전략을 사용할 수 있다고 생각합니다.
 - 현재는 유니티만 사용해서도 숏폼영상 플레이를 빠르게 할 수 있는 또다른 대안을 찾아서, 이제는 사용하지 않지만, 이 작업을 하면서 유니티앱에서 웹뷰 임베딩을 잘 하는 노하우를 축적했습니다.
 - 아직까지는 유니티앱에서 이 기능 이외에 특별한 기능 한계를 더 발견한것은 없지만, 혹시 향후 리거시 기능이 웹앱으로 되어 있는 경우 개발시간 단축을 위해 임베딩 웹뷰를 사용할때가 생긴다면 잘 사용할 수 있을겁니다.
+- 더 자세한 내용은 나중에 별도 포스트로 또 다루겠습니다.
 
 <div class="video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/0r3mlmSTTbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
