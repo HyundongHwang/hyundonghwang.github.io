@@ -29,3 +29,4 @@ anconda를 설치해서 python을 사용하는 경우 activate/deactivate 기능
 부디 이 PR이 채택되서 다음 anaconda 배포판에 이 파워쉘 스크립트도 탑재되길 바래봅니다. <br>
 
 <script src="https://htmlpartitionsync.azurewebsites.net/api/PartitionJs?url=https%3A%2F%2Fgithub.com%2Fconda%2Fconda%2Fpull%2F6090&xpath=%2F%2Fdiv%5B%40class%3D%22repository-content%22%5D"></script>
+- [conda](https://github.com/conda/conda/pull/6090)

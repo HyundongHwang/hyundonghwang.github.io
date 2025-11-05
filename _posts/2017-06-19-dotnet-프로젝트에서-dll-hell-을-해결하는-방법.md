@@ -41,3 +41,4 @@ GAC 설치보다 요즘은 더 선호되는 방식이라고 하는데 일단 dep
 <br>
 
 <script src="https://htmlpartitionsync.azurewebsites.net/api/PartitionJs?url=https%3A%2F%2Fstackoverflow.com%2Fquestions%2F44622743%2Fwhen-using-nuget-how-can-i-solve-dll-hell&amp;xpath=%2F%2F*%5B%40id%3D%22content%22%5D"></script>
+- [when-using-nuget-how-can-i-solve-dll-hell](https://stackoverflow.com/questions/44622743/when-using-nuget-how-can-i-solve-dll-hell)

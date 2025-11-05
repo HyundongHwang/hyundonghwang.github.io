@@ -28,3 +28,4 @@ tags:
 <br>
 
 <script src="https://htmlpartitionsync.azurewebsites.net/api/PartitionJs?url=https%3A%2F%2Fgithub.com%2FHyundongHwang%2FMyMlStudy%2Fblob%2Fmaster%2Fmy-examples%2Fnn-proof.md&xpath=%2F%2Farticle"></script>
+- [MyMlStudy](https://github.com/HyundongHwang/MyMlStudy/blob/master/my-examples/nn-proof.md)
