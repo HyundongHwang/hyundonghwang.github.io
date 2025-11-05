@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "STREAM 기술 블로그를 시작합니다"
-date: 2025-10-01
-categories: [General, Introduction]
+comments: true
 tags: [STREAM, KPOP, 시작, 유니티, 크로스플랫폼, 기술블로그, 스타트업, 멀티미디어]
 ---
 

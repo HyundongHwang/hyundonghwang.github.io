@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "기술 스텍"
-date: 2025-10-04
-categories: [Architecture, Technology]
+comments: true
 tags: [STREAM, 기술스텍, Unity, AWS, 아키텍처, 인프라, 시스템다이어그램]
 ---
 
