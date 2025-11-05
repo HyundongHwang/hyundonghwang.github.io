@@ -2,18 +2,22 @@
 layout: post
 title: "251002 STREAM 서비스 소개"
 comments: true
-tags: [STREAM, 서비스소개, KPOP, 댄스, 앱, 플랫폼, 비디오, 인스타그램, 유투브, 틱톡]
+tags: [ STREAM, 서비스소개, KPOP, 댄스, 앱, 플랫폼, 비디오, 인스타그램, 유투브, 틱톡 ]
 ---
 
+<script src="//www.instagram.com/embed.js"></script>
+
 KPOP댄스를 독학으로 익힐려는 분들에게 필요한 모든기능이 무료로 다양하게 제공됩니다.
-- 현직 KPOP 전문 댄서님이 직접 가르쳐주시는 동영상 클래스 350개 이상.
-- 제공된 클래스 이외의 내영상 가져오기, youtube 영상 가져오기 기능.
-- 댄스학습 전용 동영상플레이어. 
-- 연습영상을 비전AI를 이용해서 박자단위로 틀린위치까지 직접 짚어주고 점수를 측정해주는 실시간 평가기능, 평가결과 소셜공유기능.
-- 댄스영상 촬영 전용카메라. 
-- 댄스영상 합성/편집 전용 동영상편집기. 
+- 현직 KPOP 아이돌 댄서님들이 직접 가르쳐주시는 동영상 클래스 350개 이상.
+- 제공된 클래스 이외의 영상파일, youtube 영상으로 배우는 클래스 플레이어.
+- 댄스학습 전용 동영상플레이어.
+- 연습영상을 비전AI를 이용해서 스텝단위로 점수를 측정해주는 실시간 평가.
+- 연습영상을 프레임단위로 틀린위치를 찾아주는 분석 플레이어.
+- 연습영상+평가결과 합성 동영상편집기, 외부소셜서비스 공유.
+- 댄스영상 촬영 전용카메라.
+- 내영상+MV영상+연습실이미지 합성/편집 전용 동영상편집기.
 - 내 촬영영상을 공유하고 댓글로 의견나누는 숏폼영상기반 소셜서비스.
-- 초고수 아마추어 댄서유저를 위한 랜덤댄스플레이.
+- 초고수 유저들을 위한 랜덤댄스플레이 연습 플레이어.
 
 # 서비스 소개
 
@@ -65,5 +69,3 @@ KPOP댄스를 독학으로 익힐려는 분들에게 필요한 모든기능이 �
 <div class="video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/J2wbMMzB6U8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-
-<script async src="//www.instagram.com/embed.js"></script>
