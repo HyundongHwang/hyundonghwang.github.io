@@ -18,13 +18,13 @@ tags: [STREAM, Unity, AI, 포즈추출, 실시간처리, 댄스평가, MediaPipe
 ## 금메달 받은 `NewJeans - Ditto` 연습영상 유투브 개인채널 공유
 
 <div class="video-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/C94bOfy3t8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/J2wbMMzB6U8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ## 금메달 받은 `투어스 - 첫만남은 계획대로 되지 않아` 연습영상 유투브 개인채널 공유
 
 <div class="video-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/J2wbMMzB6U8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/C94bOfy3t8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 네 그렇습니다.
