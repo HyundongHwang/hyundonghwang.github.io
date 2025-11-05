@@ -6,6 +6,10 @@ relative_permalinks: false
 
 gems: [jekyll-paginate]
 
+# Markdown settings
+kramdown:
+  hard_wrap: true
+
 # Setup
 title:               황현동 블로그
 tagline:             '개발, 인생, 유우머'
