@@ -24,12 +24,14 @@ STREAM을 2년간 개발하면서 클라/서버 뿐 아니라, 운영툴, 통계
 <br/>
   
 # 사용언어, 프레임워크
+
 ## 클라이언트
 - Unity C# : 82%
 - Android kotlin : 5%
 - iOS objectiveC : 5%
 - react+TypeScript+TailWindCSS : 5%
 - shell script : 3%
+
 ## 서버
 - python : 90%
 - shell script : 10%
@@ -55,9 +57,11 @@ STREAM을 2년간 개발하면서 클라/서버 뿐 아니라, 운영툴, 통계
 <br/>
 
 # 클라이언트
+
 ## Unity
 - 90% 이상 대부분의 기능 구현
 - 그래픽스, 멀티미디어, AI, GUI
+
 ## 외부 Unity 라이브러리
 - [AvProVideo](https://github.com/RenderHeads/UnityPlugin-AVProVideo)
     - 4OS(=iOS, Android, Windows, MacOS) 지원
@@ -82,6 +86,7 @@ STREAM을 2년간 개발하면서 클라/서버 뿐 아니라, 운영툴, 통계
     - 유니티앱 내부에서 WebView 렌더링
     - 렌더링 측면에서 많은 제약사항 있음.
     - 유니티와 Web간의 텍스트기반 동기/비동기 통신 지원.
+
 ## 자체제작 Unity 라이브러리
 - ZAdvCam
     - iOS, Android 의 카메라 API의 고급기능을 유니티앱으로 연동.
@@ -106,6 +111,7 @@ STREAM을 2년간 개발하면서 클라/서버 뿐 아니라, 운영툴, 통계
     - iOS용 범용 플러그인
     - mp4 동영상 파일의 메타정보 조회
     - 타겟 광고를 위한 사용자 행동 추적동의 권한 제어
+
 ## React 기반 웹앱
 - 유니티에서 웹뷰를 통한 확장 혹은 코드푸시를 이용하기 위한 기능.
 - 사용기술 : React, TypeScript, TailWindCss
@@ -116,6 +122,7 @@ STREAM을 2년간 개발하면서 클라/서버 뿐 아니라, 운영툴, 통계
 <br/>
 
 # 서버
+
 ## FireBase
 - FireStore
     - Unity 앱, 각종 서버, 운영툴 에서 사용하는 DB.
@@ -132,6 +139,7 @@ STREAM을 2년간 개발하면서 클라/서버 뿐 아니라, 운영툴, 통계
 - CrashReport
     - iOS, Android 크래시 로그 수집
     - 크래시 콜스텍, 일반로그 모두 수집
+
 ## AWS
 - S3
     - 동영상, 이미지 원본
@@ -148,11 +156,14 @@ STREAM을 2년간 개발하면서 클라/서버 뿐 아니라, 운영툴, 통계
     - 웹 API 서버
 - Batch
     - Danmix 배경지우기 분산처리
+
 ## 가정용 서버
 - 유투브 영상 다운로드 서버
+
 ## retool
 - 각종 지표, 통계 서버
 - 사용자 활동 추적, 관리
+
 ## tinyurl
 - 랜플 단축 url
 - 유저 영상 단축 url
