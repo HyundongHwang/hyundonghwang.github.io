@@ -1,0 +1,60 @@
+---
+layout: post
+title: "서비스 소개"
+date: 2025-10-02
+categories: [Product, Overview]
+tags: [STREAM, 서비스소개, KPOP, 댄스, 앱, 플랫폼, 비디오, 인스타그램, 유투브, 틱톡]
+---
+
+# 서비스 소개
+
+- [<img src="https://i.imgur.com/u2LW3T1.png" width="50" height="50" alt=""> STREAM 공식 홈페이지](https://www.streamstudio.app/)
+- [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/App_Store_%28iOS%29.svg/24px-App_Store_%28iOS%29.svg.png" width="50" height="50" alt="App Store"> App Store](https://apps.apple.com/kr/app/id6479678039)
+- [<img src="https://i.imgur.com/PVggRNh.png" width="50" height="50" alt="Google Play"> Google Play](https://play.google.com/store/apps/details?id=app.streamstudio.stream)
+- [<img src="https://i.imgur.com/d35UT2W.png" width="50" height="50" alt="YouTube"> YouTube](https://www.youtube.com/@StreamApp.official)
+- [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/24px-Instagram_logo_2016.svg.png" width="50" height="50" alt="Instagram"> Instagram](https://www.instagram.com/stream_kpop.dance/)
+- [<img src="https://i.imgur.com/xxo4Nab.png" width="50" height="50" alt="TikTok"> TikTok](https://www.tiktok.com/@streamappofficial)
+
+![image.png](https://i.imgur.com/GcKLnUX.png)
+
+![image.png](https://i.imgur.com/CMHHDVs.png)
+
+![image.png](https://i.imgur.com/Vk9NTzm.png)
+
+![image.png](https://i.imgur.com/hG5Qqfx.png)
+
+![image.png](https://i.imgur.com/UzJScuf.png)
+
+![image.png](https://i.imgur.com/zA9glAb.png)
+
+# 서비스 데모
+
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPQVNM_CfiR/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DPQVNM_CfiR/" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"></a></div></blockquote>
+
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOvN3AaiSIE/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DOvN3AaiSIE/" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"></a></div></blockquote>
+
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOVjDoHicL3/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DOVjDoHicL3/" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"></a></div></blockquote>
+
+<blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DNFhCIIJGE3/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/DNFhCIIJGE3/" style="background:#FFFFFF; line-height:0; padding:0 0; text-decoration:none; width:100%;" target="_blank"></a></div></blockquote>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Blcsrp6vd_A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/uY3KyNdH4Vs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Kl-6zegfLC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/C94bOfy3t8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<div class="video-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/J2wbMMzB6U8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<script async src="//www.instagram.com/embed.js"></script>
