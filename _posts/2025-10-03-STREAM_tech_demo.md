@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "기술 데모"
+title: "251003 STREAM 기술 데모"
 comments: true
 tags: [STREAM, AI, 댄스평가, 튜닝도구, 비디오인코딩, 쇼츠플레이어, 데모]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "서비스 소개"
+title: "251002 STREAM 서비스 소개"
 comments: true
 tags: [STREAM, 서비스소개, KPOP, 댄스, 앱, 플랫폼, 비디오, 인스타그램, 유투브, 틱톡]
 ---
