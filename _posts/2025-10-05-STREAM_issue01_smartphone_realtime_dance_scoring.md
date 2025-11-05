@@ -9,13 +9,13 @@ tags: [STREAM, Unity, AI, 포즈추출, 실시간처리, 댄스평가, MediaPipe
 
 먼저 데모 영상을 보시지요.
 
-## `NewJeans - Ditto` iPad에서 연습, 평가, 금메달 수령, 결과 공유
+## iPad에서 연습, 평가, 결과 공유
 
 <div class="video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Kl-6zegfLC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-## 금메달 받은 `NewJeans - Ditto` 연습영상 유투브 개인채널 공유
+## 금메달 받은 `르세라핌 - PerfectNight` 연습영상 유투브 개인채널 공유
 
 <div class="video-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/J2wbMMzB6U8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -27,11 +27,6 @@ tags: [STREAM, Unity, AI, 포즈추출, 실시간처리, 댄스평가, MediaPipe
   <iframe width="560" height="315" src="https://www.youtube.com/embed/C94bOfy3t8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-네 그렇습니다.
-저도 올해로 45.
-당연히 저희 동년배들 사이에선 뉴진스가 짱입니다.
-어도어 뉴진스 법적분쟁이 길어져서 너무 아쉽습니다.
-뭔가 말로 하긴 어렵지만 뉴진스는 제가 보기엔 다른 KPOP과 좀 좋게 다른 느낌이 있습니다.
 STREAM을 하기전엔 주로 차에서 운전하면서 오디오로만 듣고 팬심을 키우다가, 이렇게 당당하게 댄스연습도 할수 있게되어 너무 영광이고 즐거웠습니다.
 물론 개발은 바쁘고, 350개 넘는 클래스들의 규격과 패턴이 일정해 지면서, 이렇게 초반처럼 개발과 댄스연습을 함께 할수 있는 필요도 없어지고, 여유는 더 없어 졌습니다.
 정말 바빠서 2년간 하루중에 10분이상 시간이 날것 같은 상황이면 무조건 맥북 앞에 앉았습니다.
