@@ -116,7 +116,9 @@ KPOP은 보통 4/4박자, 평균 120bpm 로 볼수 있습니다.
 ## OpenPose 분석
 GT 영상을 컨텐츠 제작 서버에서 선작업을 통해 AI비전모델을 이용하여 모든 프레임을 대상으로 OpenPose의 시퀀스를 산출합니다.
 
-![](https://i.imgur.com/Nte7g68.png)
+<img src="https://i.imgur.com/Nte7g68.png" width="500"/>
+
+![]()
 
 ## 댄스 클래스 에셋 준비 완료, 배포
 이렇게 제작된 영상들과 오디오 분석되고 OpenPose로 분석된 메타정보들은 파일서버(=CloudFront)에 준비되어 있다가, 유저의 단말로 배포 됩니다.
@@ -165,7 +167,7 @@ GT 영상을 컨텐츠 제작 서버에서 선작업을 통해 AI비전모델을
 이 기능들을 모바일 단말에서 실시간으로 실행해야 하기 때문에, 성능측면에서 도전적인 기능이며, 
 gstreamer와 유사한 구조를 갖는 필터그래프를 만들어서 멀티스레드를 적극 활용해서 해결했습니다.
 
-![](https://i.imgur.com/vHdox6k.png)
+<img src="https://i.imgur.com/vHdox6k.png" width="800"/>
 
 <br/>
 <br/>
