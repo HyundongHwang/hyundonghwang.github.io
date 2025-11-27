@@ -1,0 +1,330 @@
+# VSync 기술 완전 가이드
+
+## 📺 VSync란 무엇인가?
+
+**VSync (Vertical Synchronization)**는 그래픽 카드의 프레임 출력을 모니터의 주사율(refresh rate)과 동기화하는 기술입니다. 컴퓨터 그래픽스에서 화면 찢어짐(Screen Tearing)을 방지하고 부드러운 영상을 제공하는 핵심 기술입니다.
+
+## ⚡ VSync의 작동 원리
+
+### 문제 상황: 화면 찢어짐 (Screen Tearing)
+
+```
+모니터 주사율: 60Hz (1초에 60번 화면 갱신)
+GPU 프레임 출력: 100fps → 모니터보다 빠름
+결과: 한 화면에 여러 프레임이 섞여서 표시됨
+```
+
+모니터가 화면을 갱신하는 중에 GPU가 새로운 프레임을 전송하면, 화면 일부는 이전 프레임, 나머지는 새 프레임이 표시되어 수평선이 보이는 현상이 발생합니다.
+
+### VSync의 해결 방법
+
+VSync는 다음과 같은 방식으로 동작합니다:
+
+1. **수직 귀선 신호 대기**: GPU가 모니터의 수직 귀선(Vertical Blank) 신호를 기다림
+2. **프레임 출력 동기화**: 모니터 주사율에 맞춰 프레임 출력 제한
+3. **화면 찢어짐 방지**: 완전한 프레임만 화면에 표시
+
+```
+모니터 60Hz + VSync ON
+→ GPU 출력 60fps로 제한
+→ 완벽한 동기화로 찢어짐 없음
+```
+
+## 🔄 VSync의 종류별 특징
+
+### 1️⃣ Traditional VSync (전통적 VSync)
+
+#### 작동 방식
+- GPU가 모니터의 수직 귀선 신호를 엄격히 대기
+- 프레임 버퍼를 완전히 채운 후에만 출력
+
+#### 특징
+```
+장점: 화면 찢어짐 완전 제거
+단점: 입력 지연(Input Lag) 증가
+```
+
+### 2️⃣ Adaptive VSync (적응형 VSync)
+
+#### 동작 로직
+```javascript
+if (GPU_FPS > Monitor_RefreshRate) {
+    VSync = ON;  // 찢어짐 방지
+} else {
+    VSync = OFF; // 지연 감소
+}
+```
+
+#### 장점
+- FPS가 높을 때만 VSync 활성화
+- 성능이 부족할 때는 지연 최소화
+- 유연한 성능 관리
+
+### 3️⃣ Fast Sync (NVIDIA)
+
+#### 핵심 기술
+```
+Triple Buffering + Smart Frame Selection
+→ 최신 프레임만 선택적 표시
+→ 나머지 프레임은 버퍼에서 삭제
+```
+
+#### 특징
+- 입력 지연을 최소화하면서 찢어짐 방지
+- 높은 프레임레이트 환경에서 효과적
+- NVIDIA GTX 900 시리즈 이상 지원
+
+### 4️⃣ Enhanced Sync (AMD)
+
+#### AMD 버전의 Fast Sync
+- Radeon Software에서 제공
+- 적응형 동기화 기술
+- FreeSync와의 연동 가능
+
+## ⚖️ VSync 장단점 상세 분석
+
+### ✅ VSync의 장점
+
+#### 1. 화면 품질 향상
+```
+Before VSync: 찢어진 화면, 어지러운 영상
+After VSync:  부드럽고 안정적인 화면
+```
+
+#### 2. 일정한 프레임레이트
+- 예측 가능한 성능
+- 안정적인 게임 경험
+- 프레임 드롭 최소화
+
+#### 3. GPU 발열 및 전력 소비 감소
+```python
+# VSync OFF
+while True:
+    render_frame()  # 무제한 렌더링
+    
+# VSync ON  
+while True:
+    wait_for_vblank()  # 주사율에 맞춰 대기
+    render_frame()
+```
+
+### ❌ VSync의 단점
+
+#### 1. 입력 지연 (Input Lag)
+```
+마우스 클릭 → GPU 처리 → 버퍼 대기 → 화면 출력
+추가 지연: 16.67ms (60Hz 기준)
+```
+
+#### 2. FPS 제한
+```
+모니터 60Hz → 최대 60fps
+모니터 144Hz → 최대 144fps
+성능 여유가 있어도 제한됨
+```
+
+#### 3. 스터터링 (Stuttering)
+FPS가 주사율 아래로 떨어질 때:
+```
+60fps → 30fps → 20fps
+부자연스러운 프레임 드롭
+```
+
+## 🎮 게임별 최적 VSync 설정
+
+### 경쟁 게임 (FPS, MOBA, 리듬 게임)
+
+#### 권장 설정
+```yaml
+VSync: OFF
+이유: 낮은 입력 지연이 승패를 좌우
+대안: 높은 주사율 모니터 (144Hz, 240Hz, 360Hz)
+추가 설정: 
+  - G-Sync/FreeSync 활용
+  - Frame Rate Limiter 사용
+```
+
+#### 게임 예시
+- **Counter-Strike 2**: VSync OFF, 300+ fps
+- **League of Legends**: VSync OFF, 144fps 제한
+- **Valorant**: VSync OFF, 240fps 제한
+
+### 싱글플레이어 게임
+
+#### 권장 설정
+```yaml
+VSync: ON 또는 Adaptive
+이유: 화질과 부드러움이 우선
+목표: 안정적인 60fps 유지
+```
+
+#### 게임 예시
+- **사이버펑크 2077**: Adaptive VSync
+- **위처 3**: VSync ON
+- **레드 데드 리뎀션 2**: VSync ON
+
+### 고사양 AAA 게임
+
+#### 권장 설정
+```yaml
+VSync: Fast Sync 또는 Enhanced Sync
+이유: 성능과 화질의 균형
+조건: GPU 성능이 충분할 때
+```
+
+## 🖥️ 모니터 기술과의 관계
+
+### G-Sync (NVIDIA) vs FreeSync (AMD)
+
+#### 가변 주사율 기술
+```
+일반 모니터: 고정 60Hz/144Hz
+G-Sync/FreeSync: 30-144Hz 가변
+→ GPU 출력에 맞춰 모니터가 적응
+```
+
+#### 동작 원리
+```python
+# 일반 VSync
+monitor_refresh = 60  # 고정
+gpu_fps = varies     # 가변
+sync_to_monitor()
+
+# G-Sync/FreeSync
+monitor_refresh = gpu_fps  # 모니터가 GPU에 맞춤
+perfect_sync()
+```
+
+### 최적 조합 설정
+
+#### G-Sync/FreeSync 환경
+```yaml
+모니터: G-Sync/FreeSync 지원
+VSync: OFF
+Frame Rate Limiter: 모니터 최대 주사율 -3fps
+결과: 지연 없는 완벽한 동기화
+```
+
+#### 일반 모니터 환경
+```yaml
+화질 우선: VSync ON
+성능 우선: VSync OFF
+균형: Adaptive VSync
+```
+
+## 🔧 VSync 설정 방법
+
+### NVIDIA 제어판
+```
+1. NVIDIA 제어판 → 3D 설정 관리
+2. 수직 동기 → 선택
+   - 끄기: VSync OFF
+   - 켜기: 전통적 VSync
+   - 적응: Adaptive VSync  
+   - 빠른: Fast Sync
+```
+
+### AMD 설정
+```
+1. AMD Software → 게임 탭
+2. 디스플레이 → 기다리기 모드
+   - 끄기: VSync OFF
+   - 켜기: VSync ON
+   - Enhanced Sync: AMD Fast Sync
+```
+
+### 게임 내 설정
+```yaml
+대부분의 게임:
+  - 옵션 → 그래픽 설정
+  - VSync/수직동기 항목
+  - ON/OFF/Adaptive 선택 가능
+```
+
+## 📊 VSync vs 다른 기술 비교
+
+| 기술 | 찢어짐 방지 | 입력 지연 | FPS 제한 | 호환성 |
+|------|-------------|-----------|----------|---------|
+| **VSync OFF** | ❌ | ⭐⭐⭐ | ❌ | ⭐⭐⭐ |
+| **Traditional VSync** | ⭐⭐⭐ | ⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
+| **Adaptive VSync** | ⭐⭐ | ⭐⭐ | ⭐⭐ | ⭐⭐ |
+| **Fast Sync** | ⭐⭐⭐ | ⭐⭐⭐ | ❌ | ⭐ |
+| **G-Sync/FreeSync** | ⭐⭐⭐ | ⭐⭐⭐ | ❌ | ⭐⭐ |
+
+## 🎯 상황별 최적 설정 가이드
+
+### 하드웨어별 권장 설정
+
+#### 고성능 게이밍 PC + 고주사율 모니터
+```yaml
+CPU: i7/i9, Ryzen 7/9
+GPU: RTX 4070 이상, RX 7800 XT 이상
+모니터: 144Hz+ G-Sync/FreeSync
+
+권장 설정:
+  VSync: OFF
+  G-Sync/FreeSync: ON
+  Frame Limiter: 141fps (144Hz-3)
+```
+
+#### 중급 게이밍 PC + 일반 모니터
+```yaml
+CPU: i5, Ryzen 5
+GPU: RTX 4060, RX 7600
+모니터: 60Hz 일반
+
+권장 설정:
+  VSync: Adaptive
+  목표: 안정적 60fps
+```
+
+#### 저사양 PC
+```yaml
+예산형 하드웨어
+모니터: 60Hz
+
+권장 설정:
+  VSync: OFF
+  Frame Rate Limiter: 60fps
+  그래픽 옵션: 낮음~중간
+```
+
+## 🔬 VSync 성능 측정 방법
+
+### 벤치마크 도구
+```yaml
+MSI Afterburner: 실시간 FPS/지연시간 모니터링
+RTSS: 프레임타임 그래프
+LatencyMon: 시스템 지연 측정
+```
+
+### 측정 지표
+```python
+# 주요 측정 항목
+fps_average = sum(frame_times) / len(frame_times)
+fps_1_percent = percentile(frame_times, 1)
+input_lag = time(click) - time(display)
+frame_consistency = std_deviation(frame_times)
+```
+
+## 🚀 미래 기술 전망
+
+### 차세대 동기화 기술
+
+#### Variable Rate Shading + VSync
+- GPU 리소스 효율성 향상
+- 선택적 영역 고품질 렌더링
+
+#### AI 기반 프레임 예측
+```python
+def ai_frame_prediction():
+    next_frame = neural_network.predict(current_scene)
+    optimize_sync_timing(next_frame)
+    return smoother_experience
+```
+
+#### HDMI 2.1 Variable Refresh Rate
+- 48-120Hz 광범위 가변 주사율
+- 콘솔 게임기 최적화
+
+VSync는 게이머의 플레이 스타일과 하드웨어 환경에 따라 신중하게 선택해야 하는 중요한 기술입니다. 올바른 설정으로 최적의 게임 경험을 만들어보세요! 🎮
