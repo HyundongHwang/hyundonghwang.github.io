@@ -1,4 +1,11 @@
-# WebRTC vs RTMP: 실시간 스트리밍 프로토콜 완전 비교 가이드
+---
+layout: post
+title: "251127 WebRTC RTMP 비교"
+comments: true
+tags: []
+---
+
+# WebRTC RTMP 비교
 
 ## 개요
 
