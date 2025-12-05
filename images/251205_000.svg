@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title-text { font-family: 'Arial', sans-serif; font-size: 18px; font-weight: bold; fill: #2c3e50; }
+      .subtitle-text { font-family: 'Arial', sans-serif; font-size: 14px; fill: #34495e; }
+      .frame-label { font-family: 'Arial', sans-serif; font-size: 12px; fill: #2c3e50; text-anchor: middle; }
+      .gop-label { font-family: 'Arial', sans-serif; font-size: 11px; fill: #7f8c8d; text-anchor: middle; }
+      .i-frame { fill: #e74c3c; stroke: #c0392b; stroke-width: 2; }
+      .p-frame { fill: #3498db; stroke: #2980b9; stroke-width: 1; }
+      .seek-arrow { fill: none; stroke: #e67e22; stroke-width: 3; marker-end: url(#arrowhead); }
+      .seek-text { font-family: 'Arial', sans-serif; font-size: 11px; fill: #e67e22; font-weight: bold; }
+      .error-text { font-family: 'Arial', sans-serif; font-size: 12px; fill: #e74c3c; font-weight: bold; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e67e22" />
+    </marker>
+  </defs>
+  
+  <!-- Title -->
+  <text x="400" y="30" class="title-text" text-anchor="middle">GOP=30 구조와 프레임 Seek 오차 문제</text>
+  
+  <!-- GOP=30 Frame Structure -->
+  <text x="50" y="70" class="subtitle-text">GOP=30 프레임 구조:</text>
+  
+  <!-- I-frame (키프레임) -->
+  <rect x="50" y="90" width="30" height="40" class="i-frame" />
+  <text x="65" y="115" class="frame-label">I</text>
+  <text x="65" y="140" class="gop-label">0</text>
+  
+  <!-- P-frames -->
+  <g id="p-frames">
+    <!-- P-frames 1-29 -->
+    <rect x="90" y="90" width="20" height="40" class="p-frame" />
+    <text x="100" y="115" class="frame-label">P</text>
+    <text x="100" y="140" class="gop-label">1</text>
+    
+    <rect x="120" y="90" width="20" height="40" class="p-frame" />
+    <text x="130" y="115" class="frame-label">P</text>
+    <text x="130" y="140" class="gop-label">2</text>
+    
+    <rect x="150" y="90" width="20" height="40" class="p-frame" />
+    <text x="160" y="115" class="frame-label">P</text>
+    <text x="160" y="140" class="gop-label">3</text>
+    
+    <!-- ... 생략 표시 -->
+    <text x="180" y="110" class="frame-label">...</text>
+    
+    <!-- 15번째 프레임 (중간) - 강조 -->
+    <rect x="410" y="90" width="20" height="40" class="p-frame" style="fill: #f39c12; stroke: #e67e22; stroke-width: 2;" />
+    <text x="420" y="115" class="frame-label">P</text>
+    <text x="420" y="140" class="gop-label">15</text>
+    
+    <!-- ... 생략 표시 -->
+    <text x="450" y="110" class="frame-label">...</text>
+    
+    <!-- 29번째 프레임 -->
+    <rect x="690" y="90" width="20" height="40" class="p-frame" />
+    <text x="700" y="115" class="frame-label">P</text>
+    <text x="700" y="140" class="gop-label">29</text>
+  </g>
+  
+  <!-- Next I-frame -->
+  <rect x="720" y="90" width="30" height="40" class="i-frame" />
+  <text x="735" y="115" class="frame-label">I</text>
+  <text x="735" y="140" class="gop-label">30</text>
+  
+  <!-- Seek Request -->
+  <text x="50" y="200" class="subtitle-text">사용자 요청: 15번째 프레임으로 seek</text>
+  
+  <!-- Seek Arrow pointing to frame 15 -->
+  <path d="M 420 180 L 420 150" class="seek-arrow" />
+  <text x="440" y="175" class="seek-text">Seek 요청</text>
+  
+  <!-- Actual Result -->
+  <text x="50" y="240" class="subtitle-text">실제 결과: 가장 가까운 키프레임으로 이동</text>
+  
+  <!-- Arrow to I-frame 0 -->
+  <path d="M 65 260 L 65 150" class="seek-arrow" style="stroke: #c0392b;" />
+  <text x="75" y="255" class="error-text">실제 이동</text>
+  <text x="75" y="270" class="error-text">(0번 프레임)</text>
+  
+  <!-- Or Arrow to I-frame 30 -->
+  <path d="M 735 260 L 735 150" class="seek-arrow" style="stroke: #c0392b;" />
+  <text x="650" y="255" class="error-text">또는 실제 이동</text>
+  <text x="655" y="270" class="error-text">(30번 프레임)</text>
+  
+  <!-- Error Calculation -->
+  <text x="50" y="310" class="subtitle-text">오차 계산:</text>
+  <text x="50" y="330" class="error-text">목표: 15번 프레임 → 실제: 0번 또는 30번 → 오차: ±15프레임</text>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 350)">
+    <rect x="0" y="0" width="15" height="15" class="i-frame" />
+    <text x="20" y="12" class="gop-label">I-frame (키프레임)</text>
+    
+    <rect x="150" y="0" width="15" height="15" class="p-frame" />
+    <text x="170" y="12" class="gop-label">P-frame (압축 프레임)</text>
+    
+    <rect x="320" y="0" width="15" height="15" style="fill: #f39c12; stroke: #e67e22; stroke-width: 2;" />
+    <text x="340" y="12" class="gop-label">목표 프레임</text>
+  </g>
+</svg>
