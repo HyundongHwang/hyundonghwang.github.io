@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "260107 Firestore Vector Search 완전 가이드"
-date: 2026-01-07
+comments: true
 tags:
   - Firestore
   - Vector-Search

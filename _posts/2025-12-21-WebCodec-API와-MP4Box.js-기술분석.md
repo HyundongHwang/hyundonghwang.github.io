@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "241221 WebCodec API와 MP4Box.js 기술분석"
-date: 2024-12-21
+title: "251221 WebCodec API와 MP4Box.js 기술분석"
+comments: true
 tags:
 - webcodec
 - mp4box

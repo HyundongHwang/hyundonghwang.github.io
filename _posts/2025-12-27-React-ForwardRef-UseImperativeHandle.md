@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "241227 React forwardRef와 useImperativeHandle 완벽 가이드"
-date: 2024-12-27
+comments: true
 tags:
   - react
   - forwardRef

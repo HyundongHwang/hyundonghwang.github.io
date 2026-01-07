@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "251012 STREAM 이슈8. 유니티에서 스마트폰 고급카메라 기능 사용 (iOS편)"
-date: 2025-10-12
 comments: true
 tags:
 - STREAM

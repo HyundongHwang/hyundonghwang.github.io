@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "241227 React에서 Singleton 패턴과 Zustand로 상태 관리하기"
-date: 2024-12-27
+title: "251227 React에서 Singleton 패턴과 Zustand로 상태 관리하기"
+comments: true
 tags:
   - react
   - zustand

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "251013 STREAM 이슈9. 유니티에서 스마트폰 고급카메라 기능 사용 (Android편)"
-date: 2025-10-13
 comments: true
 tags:
 - STREAM

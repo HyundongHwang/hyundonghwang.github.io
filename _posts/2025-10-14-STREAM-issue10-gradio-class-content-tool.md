@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "251014 STREAM 이슈10. gradio로 만든 클래스 컨텐츠 제작도구"
-date: 2025-10-14
 comments: true
 tags:
 - STREAM

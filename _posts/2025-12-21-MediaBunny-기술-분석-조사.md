@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "241221 MediaBunny 기술 분석 조사"
-date: 2024-12-21
+title: "251221 MediaBunny 기술 분석 조사"
+comments: true
 tags:
 - mediabunny
 - video-processing

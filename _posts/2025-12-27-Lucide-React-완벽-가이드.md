@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "241227 Lucide React: 모던 웹 개발의 아이콘 혁명"
-date: 2024-12-27
+title: "251227 Lucide React: 모던 웹 개발의 아이콘 혁명"
+comments: true
 tags:
   - lucide-react
   - icons

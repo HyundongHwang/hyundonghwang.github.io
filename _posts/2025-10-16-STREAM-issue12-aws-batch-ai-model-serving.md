@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "251016 STREAM 이슈12. AWS Batch에서 CPU분산처리를 이용한 AI모델 서빙"
-date: 2025-10-16
 comments: true
 tags:
 - STREAM

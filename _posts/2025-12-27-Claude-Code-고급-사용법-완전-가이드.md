@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "241227 Claude Code 고급 사용법 완전 가이드: macOS 개발자를 위한 궁극의 워크플로우"
-date: 2024-12-27
+title: "251227 Claude Code 고급 사용법 완전 가이드: macOS 개발자를 위한 궁극의 워크플로우"
+comments: true
 tags:
   - claude-code
   - macos
