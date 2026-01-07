@@ -2,9 +2,9 @@
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink:           pretty
-relative_permalinks: false
+# relative_permalinks: false  # deprecated 설정 제거
 
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 # Markdown settings
 kramdown:

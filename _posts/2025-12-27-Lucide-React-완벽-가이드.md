@@ -151,6 +151,7 @@ pnpm add lucide-react
 
 ### 기본 사용법
 
+{% raw %}
 ```typescript
 // 1. 필요한 아이콘들 import
 import { Camera, Home, Settings, Mail, Phone } from 'lucide-react';
@@ -176,6 +177,7 @@ const App = () => {
   );
 };
 ```
+{% endraw %}
 
 ### 고급 사용법: 동적 아이콘
 
@@ -430,6 +432,7 @@ const ThemedIcon = ({ name, ...props }) => {
 
 ### 3. 아이콘 애니메이션
 
+{% raw %}
 ```typescript
 // components/AnimatedIcon.tsx
 import { motion } from 'framer-motion';
@@ -453,6 +456,7 @@ const AnimatedHeart = ({ isLiked, ...props }) => {
   );
 };
 ```
+{% endraw %}
 
 ## 2024년 트렌드와 미래 전망
 
@@ -510,6 +514,7 @@ const AnimatedHeart = ({ isLiked, ...props }) => {
 
 ### 안티 패턴 피하기
 
+{% raw %}
 ```typescript
 ❌ 피해야 할 것들:
 
@@ -536,6 +541,7 @@ const AppIcon = (props) => <Home size={20} strokeWidth={1.5} {...props} />;
 // 3. CSS 클래스 활용
 <Home className="icon-large" />
 ```
+{% endraw %}
 
 ## 실무 팁과 트러블슈팅
 

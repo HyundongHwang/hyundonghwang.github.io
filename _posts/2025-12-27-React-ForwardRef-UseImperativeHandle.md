@@ -216,6 +216,7 @@ function Form() {
 
 ### 3. 애니메이션 컴포넌트
 
+{% raw %}
 ```typescript
 interface AnimationHandle {
   play: () => void;
@@ -284,6 +285,7 @@ function AnimationDemo() {
   );
 }
 ```
+{% endraw %}
 
 ## 베스트 프랙티스
 
