@@ -1,6 +1,7 @@
 ---
 layout: post
-title: xxx
+title: 240101 xxx
+date: 2024-01-01
 comments: true
 tags:
 - 블로그
