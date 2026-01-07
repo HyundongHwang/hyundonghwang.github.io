@@ -6,6 +6,20 @@ tags:
 - grafika
 - kotlin
 - rxjava
+- android
+- 비디오캡처
+- 카메라
+- 안드로이드개발
+- 멀티미디어
+- 영상처리
+- 리액티브프로그래밍
+- 모바일앱
+- OpenGL
+- 스트리밍
+- 안드로이드카메라
+- 실시간처리
+- 함수형프로그래밍
+- 비동기처리
 ---
 
 grafika 의 ContinuousCapture 예제를 kotlin+rxjava 스타일로...

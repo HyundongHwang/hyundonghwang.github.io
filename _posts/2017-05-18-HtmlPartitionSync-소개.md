@@ -7,6 +7,21 @@ tags:
 - 꿀팁
 - javascript
 - doc
+- HtmlPartitionSync
+- github
+- azure
+- webapp
+- api
+- xpath
+- web-scraping
+- blog
+- automation
+- content-sync
+- web-service
+- tool
+- utility
+- productivity
+- open-source
 ---
 
 

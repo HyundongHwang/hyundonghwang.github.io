@@ -2,7 +2,7 @@
 layout: post
 title: "251005 STREAM 이슈1. 스마트폰 만으로 촬영과 댄스점수평가를 동시에"
 comments: true
-tags: [STREAM, Unity, AI, 포즈추출, 실시간처리, 댄스평가, MediaPipe]
+tags: [STREAM, Unity, AI, 포즈추출, 실시간처리, 댄스평가, MediaPipe, KPOP, 댄스, OpenPose, 컴퓨터비전, 머신러닝, 모션분석, 패턴매칭, 실시간AI, 멀티스레드, 성능최적화, 모바일AI, 스마트폰, 비디오분석, 포즈인식, 댄스학습, 음악분석, 비트분석, 동작인식, 자세교정, 스코어링시스템]
 ---
 
 # 데모 영상

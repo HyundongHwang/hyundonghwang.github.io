@@ -10,6 +10,22 @@ tags:
 - network
 - osi
 - study
+- packet-analysis
+- network-security
+- protocol-analysis
+- networking
+- ethernet
+- http
+- https
+- dns
+- arp
+- cybersecurity
+- network-monitoring
+- forensics
+- pcap
+- network-troubleshooting
+- malware-analysis
+- intrusion-detection
 ---
 
 <!-- TOC -->

@@ -7,6 +7,19 @@ tags:
 - shortcut
 - 단축키
 - 꿀팁
+- ide
+- android
+- windows
+- productivity
+- development
+- debugging
+- 개발환경
+- 안드로이드개발
+- 키보드단축키
+- 효율성
+- 개발도구
+- tips
+- 생산성
 ---
 
 

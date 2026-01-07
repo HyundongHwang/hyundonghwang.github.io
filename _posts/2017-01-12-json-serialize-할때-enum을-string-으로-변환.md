@@ -8,6 +8,16 @@ tags:
 - study
 - StringEnumConverter
 - 꿀팁
+- csharp
+- serialization
+- enum
+- json
+- newtonsoft
+- converter
+- tips
+- programming
+- webapi
+- data
 ---
 
 <!-- TOC -->

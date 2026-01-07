@@ -5,6 +5,19 @@ comments: true
 tags:
 - markdown
 - study
+- documentation
+- syntax-highlighting
+- flowchart
+- sequence-diagram
+- marxico
+- markup-language
+- writing
+- blog
+- GitHub
+- technical-writing
+- diagram
+- visualization
+- formatting
 ---
 
 <!-- TOC -->

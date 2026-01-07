@@ -7,6 +7,20 @@ tags:
 - c#
 - study
 - .net
+- csharp
+- compiler
+- syntax
+- parsing
+- compilation
+- ast
+- api
+- microsoft
+- nuget
+- semantic
+- codegen
+- metaprogramming
+- reflection
+- analysis
 ---
 
 <!-- TOC -->

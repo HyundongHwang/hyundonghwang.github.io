@@ -2,7 +2,7 @@
 layout: post
 title: "251127 WebRTC API 문서"
 comments: true
-tags: []
+tags: [WebRTC, JavaScript, API, RealTime, Communication, P2P, Browser, WebDevelopment, Streaming, Video, Audio, DataChannel, ICE, STUN, TURN, MediaStream, RTCPeerConnection, Signaling, DTLS, SRTP, Network]
 ---
 
 # WebRTC API 문서

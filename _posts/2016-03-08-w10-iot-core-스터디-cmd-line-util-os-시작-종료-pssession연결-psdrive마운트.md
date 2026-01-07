@@ -5,6 +5,30 @@ comments: true
 tags:
 - iotcore
 - kakaocat
+- Windows 10 IoT Core
+- IoT
+- Internet of Things
+- Raspberry Pi
+- PowerShell
+- PSSession
+- PSDrive
+- Windows
+- embedded systems
+- command line
+- remote management
+- device management
+- WinRM
+- network configuration
+- file sharing
+- system administration
+- headless
+- headed
+- boot options
+- device drivers
+- services
+- shutdown
+- restart
+- display resolution
 ---
 
 <!-- TOC -->

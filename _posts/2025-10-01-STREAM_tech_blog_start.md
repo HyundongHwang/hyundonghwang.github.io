@@ -2,7 +2,7 @@
 layout: post
 title: "251001 STREAM 기술 이야기로 블로그 다시 시작"
 comments: true
-tags: [ STREAM, KPOP, 시작, 유니티, 크로스플랫폼, 기술블로그, 스타트업, 멀티미디어 ]
+tags: [STREAM, KPOP, 시작, 유니티, 크로스플랫폼, 기술블로그, 스타트업, 멀티미디어, Unity, 게임엔진, 비전AI, iOS, Android, Windows, MacOS, Flutter, ReactNative, 영상편집, 고급그래픽스, 개발경험, 창업, 앱개발, 모바일개발]
 ---
 
 # 블로그 다시 시작

@@ -5,6 +5,23 @@ comments: true
 tags:
 - .net
 - resharper
+- Visual Studio
+- 개발도구
+- IDE
+- 단축키
+- 코드편집
+- 리팩토링
+- 생산성도구
+- JetBrains
+- C#
+- 개발환경
+- 설정
+- 문제해결
+- 키보드설정
+- 플러그인
+- 코드분석
+- 디버깅
+- .NET Framework
 ---
 
 <!-- TOC -->

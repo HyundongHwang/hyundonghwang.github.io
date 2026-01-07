@@ -16,6 +16,27 @@ tags:
 - remote app
 - qna maker
 - cloud pbx
+- microsoft
+- conference
+- chatbot
+- cognitive services
+- visual studio 2017
+- serverless
+- functions
+- desktop bridge
+- uwp
+- skype for business
+- exchange online
+- sharepoint
+- artificial intelligence
+- ai
+- natural language processing
+- cross platform
+- cloud computing
+- saas
+- paas
+- 컨퍼런스
+- 기술 동향
 ---
 
 

@@ -8,6 +8,16 @@ tags:
 - arm
 - p/invoke
 - study
+- raspberrypi
+- iotcore
+- native
+- interop
+- dll
+- debugging
+- architecture
+- embedded
+- crossplatform
+- legacy
 ---
 
 <!-- TOC -->

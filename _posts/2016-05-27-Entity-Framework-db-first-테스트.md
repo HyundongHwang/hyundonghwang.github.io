@@ -11,6 +11,21 @@ tags:
 - database
 - mssql
 - sqlserver
+- visual studio
+- ado.net
+- edmx
+- linq
+- orm
+- connection string
+- crud
+- select
+- insert
+- update
+- delete
+- console application
+- programming
+- tutorial
+- 개발
 ---
 
 

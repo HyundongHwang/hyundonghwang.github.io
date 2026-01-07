@@ -4,6 +4,20 @@ title: 160311 IoT Core study
 comments: true
 tags:
 - iotcore
+- windows10
+- uwp
+- raspberrypi
+- embedded
+- powershell
+- gpio
+- bluetooth
+- wifi
+- networking
+- smb
+- ftp
+- hardware
+- development
+- microsoft
 ---
 
 <!-- TOC -->

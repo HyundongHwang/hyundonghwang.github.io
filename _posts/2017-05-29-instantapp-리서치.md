@@ -7,6 +7,21 @@ tags:
 - github
 - instantapp
 - study
+- google
+- mobile
+- app-development
+- research
+- prototype
+- experiment
+- testing
+- android-studio
+- gradle
+- android-development
+- instant-apps
+- google-play
+- project
+- troubleshooting
+- failed-attempt
 ---
 
 <br>

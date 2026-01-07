@@ -7,6 +7,20 @@ tags:
 - jetbrain
 - resharper
 - c#
+- IDE
+- Visual-Studio
+- refactoring
+- navigation
+- productivity
+- shortcuts
+- code-analysis
+- debugging
+- architecture
+- dependency-diagram
+- code-generation
+- code-cleanup
+- development-tools
+- IntelliSense
 ---
 
 <!-- TOC -->

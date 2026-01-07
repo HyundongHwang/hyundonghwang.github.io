@@ -9,6 +9,23 @@ tags:
 - c++
 - COM
 - interop
+- ATL
+- Visual Studio
+- BSTR
+- IDispatch
+- IUnknown
+- ConnectionPoint
+- 이벤트처리
+- 비동기
+- 프록시
+- 래퍼
+- 타입라이브러리
+- tlbimp
+- regsvr32
+- 콘솔애플리케이션
+- 윈도우개발
+- 네이티브코드
+- 매니지드코드
 ---
 
 <!-- TOC -->

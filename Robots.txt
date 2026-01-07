@@ -1,9 +1,24 @@
-User-agent: Googlebot
-User-agent: DAUMOA
-User-agent: NaverBot
-User-agent: ZumBot
+# 모든 검색엔진 크롤러 환영
+User-agent: *
 Allow: /
-User-agent: BadBot
-Disallow: /
 
-Sitemap: http://hyundonghwang.github.io/sitemap.xml
+# 크롤링 빈도 조절 (선택사항)
+Crawl-delay: 1
+
+# Sitemap 위치 (HTTPS 사용)
+Sitemap: https://hyundonghwang.github.io/sitemap.xml
+Sitemap: https://hyundonghwang.github.io/feed.xml
+
+# 추가 허용할 디렉토리들
+Allow: /public/
+Allow: /assets/
+Allow: /_posts/
+Allow: /archive/
+Allow: /tags/
+
+# 불필요한 파일들만 차단
+Disallow: /Gemfile*
+Disallow: /_site/
+Disallow: /.git/
+Disallow: /README.md
+Disallow: /CLAUDE.md

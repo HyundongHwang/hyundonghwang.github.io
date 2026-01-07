@@ -8,6 +8,21 @@ tags:
 - Azure Storage
 - powershell
 - library
+- file-upload
+- cloud-storage
+- microsoft
+- storage-service
+- file-management
+- tools
+- automation
+- utility
+- github
+- open-source
+- scripting
+- deployment
+- web-service
+- cli
+- command-line
 ---
 
 <!-- TOC -->

@@ -7,6 +7,25 @@ tags:
 - c#
 - .net
 - wpf
+- dotnet
+- xaml
+- uwp
+- programming
+- framework
+- microsoft
+- visualstudio
+- linq
+- async
+- await
+- entity-framework
+- reflection
+- lambda
+- anonymous-types
+- dependency-property
+- data-binding
+- silverlight
+- json.net
+- sqlite
 ---
 
 

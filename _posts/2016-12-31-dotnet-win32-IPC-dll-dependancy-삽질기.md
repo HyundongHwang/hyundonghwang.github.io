@@ -11,6 +11,27 @@ tags:
 - ipc
 - study
 - blog
+- mfc
+- visual studio
+- dll
+- dependency
+- vcredist
+- universal crt
+- troubleshooting
+- debugging
+- windows
+- interprocess communication
+- bridge
+- crt
+- runtime
+- linker
+- static linking
+- dynamic linking
+- side by side
+- deployment
+- compatibility
+- 삽질
+- 문제해결
 ---
 
 <!-- TOC -->

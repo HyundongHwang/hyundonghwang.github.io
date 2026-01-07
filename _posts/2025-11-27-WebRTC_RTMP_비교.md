@@ -2,7 +2,7 @@
 layout: post
 title: "251127 WebRTC RTMP 비교"
 comments: true
-tags: []
+tags: [WebRTC, RTMP, Streaming, RealTime, Protocol, Broadcasting, P2P, Video, Audio, Latency, CDN, Flash, TCP, UDP, HLS, DASH, LiveStreaming, Comparison, Architecture, Performance]
 ---
 
 # WebRTC RTMP 비교

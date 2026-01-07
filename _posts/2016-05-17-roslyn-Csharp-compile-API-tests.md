@@ -7,6 +7,31 @@ tags:
 - c#
 - study
 - .net
+- Microsoft Roslyn
+- compiler
+- code analysis
+- syntax tree
+- CSharpSyntaxTree
+- compilation
+- semantic analysis
+- metaprogramming
+- code generation
+- static analysis
+- AST
+- abstract syntax tree
+- symbol analysis
+- InvocationExpression
+- MethodDeclarationSyntax
+- PropertyDeclarationSyntax
+- ClassDeclarationSyntax
+- NamespaceDeclarationSyntax
+- NuGet
+- Microsoft.CodeAnalysis
+- pdb files
+- executable generation
+- parsing
+- binding errors
+- diagnostic analysis
 ---
 
 <!-- TOC -->

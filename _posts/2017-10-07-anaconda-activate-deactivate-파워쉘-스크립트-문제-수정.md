@@ -3,13 +3,26 @@ layout: post
 title: 171007 anaconda activate/deactivate 파워쉘 스크립트 문제 수정
 comments: true
 tags:
-- anconda
+- anaconda
 - conda
 - python
 - powershell
 - bat
 - ps1
 - PR
+- activate
+- deactivate
+- script
+- windows
+- virtual-environment
+- bug-fix
+- contribution
+- open-source
+- shell
+- environment-management
+- compatibility
+- issue-fix
+- pull-request
 ---
 
 <!-- TOC -->

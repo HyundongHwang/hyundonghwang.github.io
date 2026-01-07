@@ -11,6 +11,23 @@ tags:
 - database
 - mssql
 - sqlserver
+- azure
+- powershell
+- webservice
+- logging
+- diagnostics
+- cloud
+- microsoft
+- webapp
+- monitoring
+- troubleshooting
+- logs
+- streaming
+- deployment
+- devops
+- scripting
+- automation
+- administration
 ---
 
 

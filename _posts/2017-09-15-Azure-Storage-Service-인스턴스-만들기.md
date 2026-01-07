@@ -10,6 +10,21 @@ tags:
 - tutorail
 - study
 - blackbox
+- cloud
+- microsoft
+- database
+- tutorial
+- guide
+- setup
+- configuration
+- web-service
+- replication
+- LRS
+- resource-manager
+- access-key
+- connection-string
+- pricing
+- deployment
 ---
 
 <!-- TOC -->

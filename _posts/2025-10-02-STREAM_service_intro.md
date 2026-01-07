@@ -2,7 +2,7 @@
 layout: post
 title: "251002 STREAM 서비스 소개"
 comments: true
-tags: [ STREAM, 서비스소개, KPOP, 댄스, 앱, 플랫폼, 비디오, 인스타그램, 유투브, 틱톡 ]
+tags: [STREAM, 서비스소개, KPOP, 댄스, 앱, 플랫폼, 비디오, 인스타그램, 유투브, 틱톡, 모바일앱, 댄스학습, AI평가, 동영상편집, 소셜미디어, 숏폼영상, 실시간평가, 동영상플레이어, 카메라, 영상편집, 공유기능, 댓글시스템, 랜덤플레이, 교육앱, 엔터테인먼트, 사용자생성콘텐츠]
 ---
 
 <script src="//www.instagram.com/embed.js"></script>

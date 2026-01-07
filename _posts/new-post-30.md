@@ -3,7 +3,12 @@ layout: post
 title: xxx
 comments: true
 tags:
-- xxx
+- template
+- placeholder
+- draft
+- blog
+- post
+- jekyll
 ---
 
 <!-- TOC -->

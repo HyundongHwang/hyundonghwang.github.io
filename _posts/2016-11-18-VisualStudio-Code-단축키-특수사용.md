@@ -11,6 +11,19 @@ tags:
 - ipc
 - study
 - blog
+- vscode
+- visualstudio
+- editor
+- shortcuts
+- debugging
+- extensions
+- nodejs
+- javascript
+- markdown
+- powershell
+- chrome
+- development
+- productivity
 ---
 
 

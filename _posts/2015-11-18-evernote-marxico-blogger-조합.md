@@ -8,7 +8,21 @@ tags:
 - marxico
 - blog
 - blogger
-- Marxico
+- markdown
+- productivity
+- note-taking
+- documentation
+- writing
+- publishing
+- google
+- workflow
+- content-management
+- text-editor
+- wyswyg
+- latex
+- github
+- blogging
+- cloud-storage
 ---
 
 <!-- TOC -->

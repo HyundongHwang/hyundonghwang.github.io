@@ -7,6 +7,17 @@ tags:
 - android
 - powershell
 - study
+- adb
+- debugging
+- shell
+- automation
+- function
+- 안드로이드스튜디오
+- 개발도구
+- 로그분석
+- 패키지필터링
+- 컬러코딩
+- 디바이스
 ---
 
 <br>

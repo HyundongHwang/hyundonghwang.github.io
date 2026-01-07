@@ -2,7 +2,7 @@
 layout: post
 title: "251004 STREAM 기술 스텍"
 comments: true
-tags: [STREAM, 기술스텍, Unity, AWS, 아키텍처, 인프라, 시스템다이어그램]
+tags: [STREAM, 기술스텍, Unity, AWS, 아키텍처, 인프라, 시스템다이어그램, C#, Python, Kotlin, TypeScript, React, Firebase, CloudFront, S3, EC2, Lambda, FFmpeg, OpenCV, TensorFlow, MediaPipe, 멀티미디어, 비디오처리, AI, 모바일개발, 크로스플랫폼, 안드로이드, iOS, 웹개발, 서버개발, 클라우드, CDN, 데이터베이스]
 ---
 
 STREAM을 2년간 개발하면서 클라/서버 뿐 아니라, 운영툴, 통계툴 등 개발이 필요한 모든 분야를 바닥부터 만들었습니다.

@@ -9,6 +9,20 @@ tags:
 - python
 - study
 - tensor-flow
+- tensorflow
+- 딥러닝
+- 머신러닝
+- AI
+- 인공지능
+- 신경망
+- neural-network
+- 데이터과학
+- 알고리즘
+- 학습모델
+- 수학
+- 통계
+- 데이터분석
+- 패턴인식
 ---
 
 
