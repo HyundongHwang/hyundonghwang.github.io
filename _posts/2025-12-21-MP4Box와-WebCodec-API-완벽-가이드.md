@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "MP4Box와 WebCodec API 완벽 가이드"
+title: "251221 MP4Box와 WebCodec API 완벽 가이드"
 date: 2025-12-21
 tags:
 - mp4box
