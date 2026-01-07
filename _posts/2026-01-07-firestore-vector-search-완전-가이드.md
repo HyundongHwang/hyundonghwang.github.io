@@ -10,8 +10,6 @@ tags:
   - LangChain
 ---
 
-# Firestore Vector Search 완전 가이드
-
 ## 개요
 Firestore Vector Search는 2024년에 출시된 Google의 공식 벡터 검색 솔루션으로, PostgreSQL의 pgvector와 유사한 기능을 Firestore 환경에서 제공합니다.
 
