@@ -19,11 +19,11 @@ title: About
 - 특히 유니티와 같은 게임엔진으로 멀티미디어 기능을 강하게 쓰는 성능 중심의 서비스를 만들어 가는데 특화된 경험과 에셋들이 많고, 이는 STREAM의 다양한 기능과 강력한 성능으로 확인할 수 있습니다.
 - 동영상 특수 플레이어, 고급 카메라, 고성능 고기능 동영상 편집기, 미디어 서버 등 다양한 기능을 STREAM에서 확인 할 수 있고, 이는 다른 분야에도 쉽게 강력한 기능으로 활용될 수 있습니다.
 - STREAM 을 만들어 가면서 겪었던 기술 이슈들과 성과들을 개인 블로그에 적어 놓았습니다.
-    - https://hyundonghwang.github.io/2025/10/01/STREAM_tech_blog_start/
-    - https://hyundonghwang.github.io/2025/10/02/STREAM_service_intro/
-    - https://hyundonghwang.github.io/2025/10/03/STREAM_tech_demo/
-    - https://hyundonghwang.github.io/2025/10/04/STREAM_tech_stack/
-    - https://hyundonghwang.github.io/2025/10/05/STREAM_issue01_smartphone_realtime_dance_scoring/
+    - [📄 STREAM 기술블로그 시작](https://hyundonghwang.github.io/2025/10/01/STREAM_tech_blog_start/)
+    - [📄 STREAM 서비스 소개](https://hyundonghwang.github.io/2025/10/02/STREAM_service_intro/)
+    - [📄 STREAM 기술 데모](https://hyundonghwang.github.io/2025/10/03/STREAM_tech_demo/)
+    - [📄 STREAM 기술 스택](https://hyundonghwang.github.io/2025/10/04/STREAM_tech_stack/)
+    - [📄 실시간 댄스 스코어링 이슈](https://hyundonghwang.github.io/2025/10/05/STREAM_issue01_smartphone_realtime_dance_scoring/)
     - …
     - TBD
 
@@ -51,10 +51,10 @@ title: About
 - 제 프로젝트의 일 뿐만아니라, 외부팀이나, 고객팀 상황을 해결하러 파견 근무하러 가서 해결한적이 많았습니다.
 - 제가 특별히 비상한 생각이나 높은 지능이 있는것은 아니라고 생각하고, 문제를 공학적으로 명확하게 다시 잘 정의를 하고, 진단을 더 효율적으로 하고, 디버깅을 좀더 명확하게 하면, 최적의 해결책이 나올때가 많았습니다.
 - 특히 개발의 문제는 제품의 기능에서 발생한 로그가 매우 중요해서 이를 잘 분석할 수 있는 개인 도구가 있으며, 늘 이를 발전시키고 활용해서 문제를 해결해 나갔습니다.
-    - https://github.com/HyundongHwang/logsloth
+    - [🐙LogSloth 로그 분석 도구](https://github.com/HyundongHwang/logsloth)
 - 사례
-    - https://d2.naver.com/helloworld/7847943
-    - https://www.deview.kr/2019/schedule/316
+    - [📄 네이버 D2 Hello World - 글로벌 네트워크 에뮬레이터 prism_pacman 소개](https://d2.naver.com/helloworld/7847943)
+    - [🎤 DEVIEW 2019 - 동영상 스트리밍 서비스, 빠르게 더 빠르게 (Ultra Low Latency, Ultra Fast Playing)](https://www.deview.kr/2019/schedule/316)
 
 ## 📝 문서화
 
