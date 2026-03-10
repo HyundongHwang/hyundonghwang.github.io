@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .title-text { font-family: 'Arial', sans-serif; font-size: 20px; font-weight: bold; fill: #2c3e50; }
+      .platform-title { font-family: 'Arial', sans-serif; font-size: 14px; font-weight: bold; fill: #34495e; }
+      .feature-text { font-family: 'Arial', sans-serif; font-size: 11px; fill: #2c3e50; }
+      .accuracy-text { font-family: 'Arial', sans-serif; font-size: 12px; font-weight: bold; }
+      .good { fill: #27ae60; }
+      .warning { fill: #f39c12; }
+      .bad { fill: #e74c3c; }
+      .platform-box { stroke: #bdc3c7; stroke-width: 2; fill: #ecf0f1; }
+      .gop1-highlight { stroke: #27ae60; stroke-width: 3; fill: #d5f4e6; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="30" class="title-text" text-anchor="middle">플랫폼별 프레임 단위 Seek 솔루션 비교</text>
+  
+  <!-- GOP=1 Solution (Top - Highlighted) -->
+  <rect x="50" y="60" width="800" height="80" class="gop1-highlight" />
+  <text x="70" y="85" class="platform-title">🏆 GOP=1 트랜스코딩 + 모든 플랫폼</text>
+  <text x="70" y="105" class="feature-text">• 프레임 정확도: ±0프레임 (완벽)</text>
+  <text x="300" y="105" class="feature-text">• Seek 속도: 즉시</text>
+  <text x="450" y="105" class="feature-text">• 1-3배속: 완벽 지원</text>
+  <text x="70" y="125" class="feature-text">⚠️ 단점: 사전 트랜스코딩 시간 필요, 파일 크기 증가</text>
+  
+  <!-- Web Browser -->
+  <rect x="50" y="160" width="180" height="120" class="platform-box" />
+  <text x="140" y="180" class="platform-title" text-anchor="middle">웹 브라우저</text>
+  <text x="60" y="200" class="feature-text">정확도: </text>
+  <text x="100" y="200" class="accuracy-text bad">±15프레임</text>
+  <text x="60" y="215" class="feature-text">속도: </text>
+  <text x="85" y="215" class="accuracy-text good">즉시</text>
+  <text x="60" y="230" class="feature-text">GOP 제약: </text>
+  <text x="110" y="230" class="accuracy-text bad">심각</text>
+  <text x="60" y="245" class="feature-text">배속재생: </text>
+  <text x="110" y="245" class="accuracy-text good">가능</text>
+  <text x="60" y="260" class="feature-text">구현: </text>
+  <text x="85" y="260" class="accuracy-text good">쉬움</text>
+  
+  <!-- Electron + FFmpeg -->
+  <rect x="250" y="160" width="180" height="120" class="platform-box" />
+  <text x="340" y="180" class="platform-title" text-anchor="middle">Electron + FFmpeg</text>
+  <text x="260" y="200" class="feature-text">정확도: </text>
+  <text x="300" y="200" class="accuracy-text good">±0프레임</text>
+  <text x="260" y="215" class="feature-text">속도: </text>
+  <text x="285" y="215" class="accuracy-text bad">200-500ms</text>
+  <text x="260" y="230" class="feature-text">GOP 제약: </text>
+  <text x="310" y="230" class="accuracy-text good">없음</text>
+  <text x="260" y="245" class="feature-text">배속재생: </text>
+  <text x="310" y="245" class="accuracy-text bad">불가능</text>
+  <text x="260" y="260" class="feature-text">구현: </text>
+  <text x="285" y="260" class="accuracy-text warning">복잡</text>
+  
+  <!-- WebCodecs -->
+  <rect x="450" y="160" width="180" height="120" class="platform-box" />
+  <text x="540" y="180" class="platform-title" text-anchor="middle">Electron + WebCodecs</text>
+  <text x="460" y="200" class="feature-text">정확도: </text>
+  <text x="500" y="200" class="accuracy-text warning">±3프레임</text>
+  <text x="460" y="215" class="feature-text">속도: </text>
+  <text x="485" y="215" class="accuracy-text good">10-50ms</text>
+  <text x="460" y="230" class="feature-text">GOP 제약: </text>
+  <text x="510" y="230" class="accuracy-text warning">부분</text>
+  <text x="460" y="245" class="feature-text">배속재생: </text>
+  <text x="510" y="245" class="accuracy-text good">가능</text>
+  <text x="460" y="260" class="feature-text">구현: </text>
+  <text x="485" y="260" class="accuracy-text warning">중간</text>
+  
+  <!-- Native Windows -->
+  <rect x="650" y="160" width="200" height="120" class="platform-box" />
+  <text x="750" y="180" class="platform-title" text-anchor="middle">Windows 네이티브</text>
+  <text x="660" y="200" class="feature-text">정확도: </text>
+  <text x="700" y="200" class="accuracy-text good">±0프레임</text>
+  <text x="660" y="215" class="feature-text">속도: </text>
+  <text x="685" y="215" class="accuracy-text good">5-30ms</text>
+  <text x="660" y="230" class="feature-text">GOP 제약: </text>
+  <text x="710" y="230" class="accuracy-text good">없음</text>
+  <text x="660" y="245" class="feature-text">배속재생: </text>
+  <text x="710" y="245" class="accuracy-text good">완벽</text>
+  <text x="660" y="260" class="feature-text">구현: </text>
+  <text x="685" y="260" class="accuracy-text bad">어려움</text>
+  
+  <!-- Native macOS -->
+  <rect x="50" y="300" width="180" height="120" class="platform-box" />
+  <text x="140" y="320" class="platform-title" text-anchor="middle">macOS 네이티브</text>
+  <text x="60" y="340" class="feature-text">정확도: </text>
+  <text x="100" y="340" class="accuracy-text good">±0프레임</text>
+  <text x="60" y="355" class="feature-text">속도: </text>
+  <text x="85" y="355" class="accuracy-text good">3-25ms</text>
+  <text x="60" y="370" class="feature-text">GOP 제약: </text>
+  <text x="110" y="370" class="accuracy-text good">없음</text>
+  <text x="60" y="385" class="feature-text">배속재생: </text>
+  <text x="110" y="385" class="accuracy-text good">완벽</text>
+  <text x="60" y="400" class="feature-text">구현: </text>
+  <text x="85" y="400" class="accuracy-text bad">어려움</text>
+  
+  <!-- Unity + AvProVideo -->
+  <rect x="250" y="300" width="200" height="120" class="platform-box" style="stroke: #3498db; stroke-width: 3; fill: #eaf2fd;" />
+  <text x="350" y="320" class="platform-title" text-anchor="middle">⭐ Unity + AvProVideo</text>
+  <text x="260" y="340" class="feature-text">정확도: </text>
+  <text x="300" y="340" class="accuracy-text good">±0.5프레임</text>
+  <text x="260" y="355" class="feature-text">속도: </text>
+  <text x="285" y="355" class="accuracy-text good">5-30ms</text>
+  <text x="260" y="370" class="feature-text">GOP 제약: </text>
+  <text x="310" y="370" class="accuracy-text good">없음</text>
+  <text x="260" y="385" class="feature-text">배속재생: </text>
+  <text x="310" y="385" class="accuracy-text good">완벽</text>
+  <text x="260" y="400" class="feature-text">구현: </text>
+  <text x="285" y="400" class="accuracy-text good">쉬움</text>
+  <text x="370" y="400" class="feature-text">💰 유료</text>
+  
+  <!-- Decision Flow -->
+  <g transform="translate(480, 300)">
+    <rect x="0" y="0" width="350" height="120" style="stroke: #9b59b6; stroke-width: 2; fill: #f4f1fb;" />
+    <text x="175" y="20" class="platform-title" text-anchor="middle">🤔 선택 가이드</text>
+    
+    <text x="10" y="40" class="feature-text">1. 사전 준비 가능 → GOP=1 트랜스코딩</text>
+    <text x="10" y="55" class="feature-text">2. 크로스플랫폼 + 상용 → Unity + AvProVideo</text>
+    <text x="10" y="70" class="feature-text">3. 플랫폼별 최적화 → 네이티브 API</text>
+    <text x="10" y="85" class="feature-text">4. 웹 전용 → WebCodecs (부분적)</text>
+    <text x="10" y="100" class="feature-text">⚠️ Electron + FFmpeg: 실시간 재생 불가</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(50, 450)">
+    <text x="0" y="15" class="platform-title">성능 범례:</text>
+    <circle cx="15" cy="35" r="8" class="good" />
+    <text x="30" y="40" class="feature-text">우수</text>
+    
+    <circle cx="80" cy="35" r="8" class="warning" />
+    <text x="95" y="40" class="feature-text">보통</text>
+    
+    <circle cx="145" cy="35" r="8" class="bad" />
+    <text x="160" y="40" class="feature-text">문제</text>
+    
+    <rect x="220" y="27" width="16" height="16" class="gop1-highlight" />
+    <text x="245" y="40" class="feature-text">GOP=1 완벽 솔루션</text>
+    
+    <rect x="380" y="27" width="16" height="16" style="stroke: #3498db; stroke-width: 2; fill: #eaf2fd;" />
+    <text x="405" y="40" class="feature-text">추천 크로스플랫폼</text>
+  </g>
+  
+  <!-- Key Insight -->
+  <rect x="50" y="500" width="800" height="80" style="stroke: #e74c3c; stroke-width: 2; fill: #fdf2f2;" />
+  <text x="70" y="520" class="platform-title">💡 핵심 인사이트</text>
+  <text x="70" y="540" class="feature-text">• GOP=1 트랜스코딩: 모든 환경에서 완벽하지만 준비시간 필요</text>
+  <text x="70" y="555" class="feature-text">• 실시간 재생 필요시: 네이티브 API 또는 Unity + AvProVideo 권장</text>
+  <text x="70" y="570" class="feature-text">• Electron + FFmpeg: 정확하지만 실시간 재생 불가로 사용성 제약</text>
+</svg>

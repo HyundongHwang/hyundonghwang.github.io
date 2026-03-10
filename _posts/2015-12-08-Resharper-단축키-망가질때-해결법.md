@@ -1,0 +1,52 @@
+---
+layout: post
+title: 151208 Resharper 단축키 망가질때 해결법
+comments: true
+tags:
+- .net
+- resharper
+- Visual Studio
+- 개발도구
+- IDE
+- 단축키
+- 코드편집
+- 리팩토링
+- 생산성도구
+- JetBrains
+- C#
+- 개발환경
+- 설정
+- 문제해결
+- 키보드설정
+- 플러그인
+- 코드분석
+- 디버깅
+- .NET Framework
+---
+
+<!-- TOC -->
+
+
+<!-- /TOC -->
+
+<br>
+<br>
+<br>
+
+
+- resharper 단축키 망가지면 개발 못할듯이 힘들다.
+- 나도 어느날 갑자기 단축키가 안되는 순간이 왔는데
+- resharper, visual studio 리셋해도 안되더라...
+
+- visual studio reset
+https://msdn.microsoft.com/en-us/library/ms241273.aspx
+
+답은 여기서 찾았다.
+http://stackoverflow.com/questions/1596328/resharper-alt-enter-not-working
+
+```text
+ReSharper > Options > Environment > Keyboard & Menus
+ReSharper Platform keyboard scheme: Visual Studio
+Apply Scheme
+Save
+```
