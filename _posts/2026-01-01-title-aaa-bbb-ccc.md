@@ -1,6 +1,6 @@
 ---
 layout: post
-title: {yyMMdd} {title aaa bbb ccc}
+title: "260101 title aaa bbb ccc"
 comments: true
 tags:
 - tag0
