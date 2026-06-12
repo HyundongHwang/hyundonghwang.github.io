@@ -1,6 +1,6 @@
 ---
 layout: post
-title: HhdStock 문서처리 DB를 Firestore에서 Aurora PostgreSQL S3로 전환하기
+title: 260612 HhdStock 문서처리 DB를 Firestore에서 Aurora PostgreSQL S3로 전환하기
 comments: true
 tags:
 - aws
@@ -10,7 +10,7 @@ tags:
 - sqlmodel
 ---
 
-# HhdStock 문서처리 DB를 Firestore에서 Aurora PostgreSQL + S3로 전환하기
+# 260612 HhdStock 문서처리 DB를 Firestore에서 Aurora PostgreSQL + S3로 전환하기
 
 HhdStock 프로젝트는 뉴스, 공시, 리포트, PDF 본문을 수집하고 요약, 감정분석, 통계, 검색으로 확장하려는 구조다. 초기에는 Firestore가 빠르고 편하지만, 문서량이 커지고 분석 작업이 늘어나면 `Aurora PostgreSQL + S3 + SQLModel` 조합이 더 적합해진다.
 
