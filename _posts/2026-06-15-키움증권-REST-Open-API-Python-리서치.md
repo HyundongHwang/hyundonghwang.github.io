@@ -12,7 +12,7 @@ tags:
 
 키움증권 REST Open API를 Python으로 사용할 때 필요한 내용을 정리했다. 목표는 단순 조회가 아니라 여러 명의 계좌를 관리하면서 계좌별 종목, 수량, 예수금 현황을 확인하고 매수/매도 액션까지 연결하는 구조를 잡는 것이다.
 
-결론부터 말하면 기술적으로는 `requests`로 충분히 시작할 수 있다. 하지만 운영 관점에서는 토큰, 계좌별 권한, 주문 중복, 미체결 확인, 법률 리스크를 반드시 별도로 설계해야 한다.
+결론부터 말하면 단순 호출은 `requests`로도 가능하지만, 다계정 조회와 배치 운영까지 고려하면 `httpx.AsyncClient`와 `async/await` 구조가 더 적합하다. 운영 관점에서는 토큰, 계좌별 권한, 주문 중복, 미체결 확인, 법률 리스크를 반드시 별도로 설계해야 한다.
 
 ## 한눈에 보는 구조
 
@@ -44,7 +44,7 @@ flowchart LR
 
 | 구분 | 장점 | 단점 |
 |---|---|---|
-| 개발 | Python에서 HTTP 요청으로 바로 연동 가능 | TR 필드명이 축약형이라 래퍼가 필요하다. |
+| 개발 | Python에서 `httpx` 기반 비동기 HTTP 요청으로 바로 연동 가능 | TR 필드명이 축약형이라 래퍼가 필요하다. |
 | 운영 | 서버 자동화와 배치 처리에 적합 | 주문 재시도, 중복 주문 방지가 어렵다. |
 | 다계정 | 사용자별 토큰을 분리하면 확장 가능 | 타인 계좌 관리에는 법률/권한 리스크가 있다. |
 | 테스트 | 모의투자 도메인이 있다 | 운영과 완전히 같다고 가정하면 안 된다. |
@@ -71,29 +71,36 @@ flowchart TD
 ## 기본 Python 예제
 
 ```python
+import asyncio
 import os
-import requests
+
+import httpx
 
 
 BASE_URL = "https://api.kiwoom.com"
 
 
-def issue_token(appkey: str, secretkey: str) -> dict:
-    res = requests.post(
+async def issue_token(client: httpx.AsyncClient, appkey: str, secretkey: str) -> dict:
+    res = await client.post(
         f"{BASE_URL}/oauth2/token",
         json={
             "grant_type": "client_credentials",
             "appkey": appkey,
             "secretkey": secretkey,
         },
-        timeout=10,
     )
     res.raise_for_status()
     return res.json()
 
 
-def call_api(token: str, api_id: str, path: str, body: dict | None = None) -> dict:
-    res = requests.post(
+async def call_api(
+    client: httpx.AsyncClient,
+    token: str,
+    api_id: str,
+    path: str,
+    body: dict | None = None,
+) -> dict:
+    res = await client.post(
         f"{BASE_URL}{path}",
         headers={
             "authorization": f"Bearer {token}",
@@ -101,15 +108,20 @@ def call_api(token: str, api_id: str, path: str, body: dict | None = None) -> di
             "Content-Type": "application/json;charset=UTF-8",
         },
         json=body or {},
-        timeout=10,
     )
     res.raise_for_status()
     return res.json()
 
 
-token_data = issue_token(os.environ["KIWOOM_APPKEY"], os.environ["KIWOOM_SECRETKEY"])
-account = call_api(token_data["token"], "ka00001", "/api/dostk/acnt")
-print(account)
+async def main() -> None:
+    async with httpx.AsyncClient(timeout=10) as client:
+        token_data = await issue_token(client, os.environ["KIWOOM_APPKEY"], os.environ["KIWOOM_SECRETKEY"])
+        account = await call_api(client, token_data["token"], "ka00001", "/api/dostk/acnt")
+        print(account)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 ## 여러 계정으로 로그인하기
@@ -117,9 +129,11 @@ print(account)
 여러 명의 계좌를 관리하려면 계정별 프로필을 만든 뒤 각 프로필이 자기 토큰을 갖게 해야 한다.
 
 ```python
+import asyncio
 from dataclasses import dataclass
 import os
-import requests
+
+import httpx
 
 
 BASE_URL = "https://api.kiwoom.com"
@@ -135,27 +149,27 @@ class KiwoomAccountProfile:
 
 
 class KiwoomRestClient:
-    def __init__(self, profile: KiwoomAccountProfile):
+    def __init__(self, http: httpx.AsyncClient, profile: KiwoomAccountProfile):
+        self.http = http
         self.profile = profile
 
-    def issue_token(self) -> None:
-        res = requests.post(
+    async def issue_token(self) -> None:
+        res = await self.http.post(
             f"{BASE_URL}/oauth2/token",
             json={
                 "grant_type": "client_credentials",
                 "appkey": self.profile.appkey,
                 "secretkey": self.profile.secretkey,
             },
-            timeout=10,
         )
         res.raise_for_status()
         self.profile.token = res.json()["token"]
 
-    def post(self, api_id: str, path: str, body: dict | None = None) -> dict:
+    async def post(self, api_id: str, path: str, body: dict | None = None) -> dict:
         if not self.profile.token:
-            self.issue_token()
+            await self.issue_token()
 
-        res = requests.post(
+        res = await self.http.post(
             f"{BASE_URL}{path}",
             headers={
                 "authorization": f"Bearer {self.profile.token}",
@@ -163,24 +177,23 @@ class KiwoomRestClient:
                 "Content-Type": "application/json;charset=UTF-8",
             },
             json=body or {},
-            timeout=10,
         )
         res.raise_for_status()
         return res.json()
 
-    def fetch_account_no(self) -> str:
-        data = self.post("ka00001", "/api/dostk/acnt")
+    async def fetch_account_no(self) -> str:
+        data = await self.post("ka00001", "/api/dostk/acnt")
         self.profile.acct_no = data["acctNo"]
         return self.profile.acct_no
 
-    def fetch_cash(self) -> dict:
-        return self.post("kt00001", "/api/dostk/acnt", {"qry_tp": "3"})
+    async def fetch_cash(self) -> dict:
+        return await self.post("kt00001", "/api/dostk/acnt", {"qry_tp": "3"})
 
-    def fetch_positions(self) -> dict:
-        return self.post("kt00018", "/api/dostk/acnt", {"qry_tp": "1", "dmst_stex_tp": "KRX"})
+    async def fetch_positions(self) -> dict:
+        return await self.post("kt00018", "/api/dostk/acnt", {"qry_tp": "1", "dmst_stex_tp": "KRX"})
 
-    def buy(self, stock_code: str, qty: int, price: int | None = None) -> dict:
-        return self.post("kt10000", "/api/dostk/ordr", {
+    async def buy(self, stock_code: str, qty: int, price: int | None = None) -> dict:
+        return await self.post("kt10000", "/api/dostk/ordr", {
             "dmst_stex_tp": "KRX",
             "stk_cd": stock_code,
             "ord_qty": str(qty),
@@ -189,8 +202,8 @@ class KiwoomRestClient:
             "cond_uv": "",
         })
 
-    def sell(self, stock_code: str, qty: int, price: int | None = None) -> dict:
-        return self.post("kt10001", "/api/dostk/ordr", {
+    async def sell(self, stock_code: str, qty: int, price: int | None = None) -> dict:
+        return await self.post("kt10001", "/api/dostk/ordr", {
             "dmst_stex_tp": "KRX",
             "stk_cd": stock_code,
             "ord_qty": str(qty),
@@ -200,14 +213,34 @@ class KiwoomRestClient:
         })
 
 
-profiles = [
-    KiwoomAccountProfile("user_a", os.environ["KIWOOM_USER_A_APPKEY"], os.environ["KIWOOM_USER_A_SECRETKEY"]),
-    KiwoomAccountProfile("user_b", os.environ["KIWOOM_USER_B_APPKEY"], os.environ["KIWOOM_USER_B_SECRETKEY"]),
-]
+def load_profiles() -> list[KiwoomAccountProfile]:
+    return [
+        KiwoomAccountProfile("user_a", os.environ["KIWOOM_USER_A_APPKEY"], os.environ["KIWOOM_USER_A_SECRETKEY"]),
+        KiwoomAccountProfile("user_b", os.environ["KIWOOM_USER_B_APPKEY"], os.environ["KIWOOM_USER_B_SECRETKEY"]),
+    ]
 
-for profile in profiles:
-    client = KiwoomRestClient(profile)
-    print(profile.owner_id, client.fetch_account_no(), client.fetch_cash(), client.fetch_positions())
+
+async def print_account_summary(client: KiwoomRestClient) -> None:
+    await client.issue_token()
+    account_no, cash, positions = await asyncio.gather(
+        client.fetch_account_no(),
+        client.fetch_cash(),
+        client.fetch_positions(),
+    )
+    print("owner:", client.profile.owner_id)
+    print("account:", account_no)
+    print("cash:", cash)
+    print("positions:", positions)
+
+
+async def main() -> None:
+    async with httpx.AsyncClient(timeout=10) as http:
+        clients = [KiwoomRestClient(http, profile) for profile in load_profiles()]
+        await asyncio.gather(*(print_account_summary(client) for client in clients))
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
 ```
 
 ## 운영 설계에서 중요한 부분
@@ -240,7 +273,7 @@ flowchart LR
 
 ## 가장 조심해야 할 것
 
-주문 API는 조회 API와 다르다. 조회는 실패하면 다시 호출해도 대체로 문제가 작지만, 주문은 재시도 한 번이 중복 주문이 될 수 있다. 따라서 주문 요청에는 반드시 내부 주문 ID를 부여하고, 응답이 유실되면 무작정 재주문하지 말고 주문/체결 조회로 상태를 확인해야 한다.
+주문 API는 조회 API와 다르다. 조회는 `asyncio.gather`로 병렬화할 수 있지만, 주문은 재시도 한 번이 중복 주문이 될 수 있다. 따라서 주문 요청에는 반드시 내부 주문 ID를 부여하고, 계좌별 주문 큐와 락으로 순서를 통제해야 한다. 응답이 유실되면 무작정 재주문하지 말고 주문/체결 조회로 상태를 확인해야 한다.
 
 또한 여러 명의 계좌를 대신 관리하는 것은 기술 문제가 아니라 권한과 법률 문제를 포함한다. 실제 서비스로 운영하려면 약관, 위임 범위, 투자일임/투자자문 해당 여부, 개인정보 처리 기준을 먼저 검토해야 한다.
 
