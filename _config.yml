@@ -52,6 +52,8 @@ title: 황현동 블로그
 tagline: "개발, 인생, 유우머"
 paginate: 20
 permalink: pretty
+timezone: Asia/Seoul
+future: true
 
 # The release of Jekyll Now that you're using
 version: v1.2.0
