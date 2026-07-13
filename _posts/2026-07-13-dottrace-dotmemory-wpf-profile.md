@@ -1,6 +1,6 @@
 ---
 layout: post
-title: WPF 웹캠 녹화 앱을 dotTrace와 dotMemory로 분석하기
+title: "260713 WPF 웹캠 녹화 앱을 dotTrace와 dotMemory로 분석하기"
 comments: true
 tags:
 - WPF
@@ -10,7 +10,9 @@ tags:
 - Performance
 ---
 
-WPF로 웹캠 프리뷰와 H.264 녹화를 붙이면, 기능 자체보다 "왜 느린지"를 확인하는 일이 더 중요해질 때가 있다. 이번에는 `OpenCvSharp` 기반 웹캠 녹화 앱을 JetBrains `dotTrace`와 `dotMemory`로 분석했다.
+# WPF 웹캠 녹화 앱을 dotTrace와 dotMemory로 분석하기
+
+2026년 7월 13일 기준으로 WPF 웹캠 프리뷰와 H.264 녹화 기능을 분석했다. 기능 자체보다 "왜 느린지"를 확인하는 일이 더 중요해질 때가 있다. 이번에는 `OpenCvSharp` 기반 웹캠 녹화 앱을 JetBrains `dotTrace`와 `dotMemory`로 분석했다.
 
 ## 분석한 문제
 
